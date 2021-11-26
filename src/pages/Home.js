@@ -47,7 +47,7 @@ const Home = () =>{
     console.log(likes)
 
     useEffect(()=>{
-        fetch('https://yts.mx/api/v2/list_movies.json?limit=20')
+        fetch('https://yts.mx/api/v2/list_movies.json?sort_by=like_count')
         .then(res=>res.json())
         .then(result=>{
             const{data:{movies}}=result
